@@ -136,21 +136,14 @@ public class ListUtil {
         if(word == null || word.isEmpty()) {
             throw new IllegalArgumentException("word is null or word is empty string");
         }
-        int length = word.length();
-        int length2 = length / 2;
-        if(length2 % 2 != 0) {
-            length2 += 1;
-        }
 
         char[] chs = word.toCharArray();
-        for(int i = 0; i < length2; i++) {
-            if(i == length2 - 1) {
-                continue;
-            }
-            char a = chs[i];
-            char b = chs[length - i - 1];
-            chs[i] = b;
-            chs[length - i - 1] = a;
+        int length = chs.length;
+
+        for(int i = 0; i < length / 2; i++) {
+            char temp = chs[i];
+            chs[i] = chs[length - i - 1];
+            chs[length - i - 1] = temp;
         }
 
         return String.valueOf(chs);

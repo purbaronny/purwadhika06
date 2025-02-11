@@ -1,4 +1,4 @@
-package com.purwadhika.util.com.purwadhika;
+package com.purwadhika;
 
 import com.purwadhika.util.ListUtil;
 
