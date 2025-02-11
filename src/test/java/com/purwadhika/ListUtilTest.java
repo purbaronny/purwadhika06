@@ -92,11 +92,4 @@ public class ListUtilTest {
         assertEquals(Arrays.asList(1, 1, 1, 0), listUtil.countWarmDays(Arrays.asList(30, 40, 50, 60)));
         assertEquals(Arrays.asList(1, 1, 0), listUtil.countWarmDays(Arrays.asList(30, 60, 90)));
     }
-
-    @Test
-    void testGetDaysWarmers() {
-        assertEquals(Arrays.asList(1, 1, 4, 2, 1, 1, 0, 0), listUtil.getDaysWarmers(Arrays.asList(73, 74, 75, 71, 69, 72, 76, 73)));
-        assertEquals(Arrays.asList(1, 1, 1, 0), listUtil.getDaysWarmers(Arrays.asList(30, 40, 50, 60)));
-        assertEquals(Arrays.asList(1, 1, 0), listUtil.getDaysWarmers(Arrays.asList(30, 60, 90)));
-    }
 }
